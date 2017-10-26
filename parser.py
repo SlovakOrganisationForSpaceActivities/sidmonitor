@@ -25,6 +25,7 @@ time=[]
 GBZ=[]
 GQD=[]
 DHO38=[]
+TBB = []
 
 #f1=open('X', 'w+')
 for i in range (1,len(data)):
@@ -34,7 +35,7 @@ for i in range (1,len(data)):
    GBZ.append(float(data[i][5]))
    GQD.append(float(data[i][8]))
    DHO38.append(float(data[i][10]))
-
+   TBB.append(float(data[i][12]))
 dates=[dt.datetime.fromtimestamp(ts) for ts in stamp]
 
 plt.figure(figsize=(19.2, 10.8), dpi=100)
@@ -47,6 +48,7 @@ ax.set_title(sys.argv[1])
 plt.plot(dates,DHO38,label="DH038")
 plt.plot(dates,GBZ,label="GBZ")
 plt.plot(dates,GQD,label="GQD")
+plt.plot(dates,TBB,label="TBB")
 plt.grid()
 ax.set_xlabel("Local Time Bojnice SK")
 ax.set_ylabel("Relative intensity")
