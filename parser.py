@@ -53,8 +53,8 @@ plt.grid()
 ax.set_xlabel("Local Time Bojnice SK")
 ax.set_ylabel("Relative intensity")
 plt.legend(shadow=True, fancybox=True)
-#plt.show()
-plt.savefig("all_"+sys.argv[1][-10:-3]+"png",dpi=100)
+plt.show()
+#plt.savefig("all_"+sys.argv[1][-10:-3]+"png",dpi=100)
 
 #f1.close()
 
